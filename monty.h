@@ -1,6 +1,8 @@
+#define _GNU_SOURCE
+#ifndef _GNU_SOURCE
+
 #ifndef MONTY_H
 #define MONTY_H
-#define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
@@ -81,5 +83,6 @@ void addqueue(stack_t **head, int n);
 void f_queue(stack_t **head, unsigned int counter);
 void f_stack(stack_t **head, unsigned int counter);
 extern bus_t bus;
+ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 
 #endif
